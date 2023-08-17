@@ -15,12 +15,14 @@ Furthermore, our experimental findings uncover several limitations and blind spo
 ## Results for Different Tasks
 
 
+## Datasets and Splits
 
-
-
-
-
-
+| Dataset | Description | URL |
+| ----- | ----------- | ---- |
+| UT-HAR | user.| [Link](https://github.com/ermongroup/Wifi_Activity_Recognition) |
+| Falldefi | user.| [Link](https://github.com/ermongroup/Wifi_Activity_Recognition) |
+| Signfi | user.| [Link](https://github.com/ermongroup/Wifi_Activity_Recognition) |
+| Widar | user.| [Link](https://github.com/ermongroup/Wifi_Activity_Recognition) |
 
 
 
