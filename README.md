@@ -23,7 +23,11 @@ Furthermore, our experimental findings uncover several limitations and blind spo
 
 ## Task Generalizability of the Representations. 
 
-
+| Algorithm | UT-HAR |      |      | URL                                                          |
+| --------- | ------ | ---- | ---- | ------------------------------------------------------------ |
+|           |        |      |      |                                                              |
+|           |        |      |      |                                                              |
+| UT-HAR    |        |      |      | [Link](https://github.com/ermongroup/Wifi_Activity_Recognition) |
 
 ## Robustness to Domain Shift.
 
