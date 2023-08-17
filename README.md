@@ -27,4 +27,5 @@ Furthermore, our experimental findings uncover several limitations and blind spo
 
 
 ## Cite the Paper
+> Xu, K., Wang, J., Zhu, H. and Zheng, D., 2023. Self-Supervised Learning for WiFi CSI-Based Human Activity Recognition: A Systematic Study. arXiv preprint arXiv:2308.02412.
 
