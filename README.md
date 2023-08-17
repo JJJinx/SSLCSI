@@ -12,9 +12,6 @@ We evaluate four categories of SSL algorithms using three publicly available CSI
 To ensure relevance to real-world applications, we design performance metrics that align with specific requirements.
 Furthermore, our experimental findings uncover several limitations and blind spots in existing work, highlighting the barriers that need to be addressed before SSL can be effectively deployed in real-world WiFi-based HAR applications. Our results also serve as a practical guideline for industry practitioners and provide valuable insights for future research endeavors in this field.
 
-## Results for Different Tasks
-
-
 ## Datasets and Splits
 
 | Dataset | Description | URL |
@@ -24,7 +21,14 @@ Furthermore, our experimental findings uncover several limitations and blind spo
 | Signfi | It comprises recordings of 276 sign gestures performed by 5 participants in two distinct environments: lab and home. The activities were captured using a receiver equipped with an Intel 5300 NIC and 3 antennas, and each recording includes data from 30 subcarriers.  To account for environmental variability, we used a subset of the dataset that specifically includes 2760 records recorded in the home environment.  Each gesture in the dataset is represented by 10 records. We selected this dataset because it encompasses nearly all of the 300 most commonly used basic sign gestures in daily life. | [Link](https://yongsen.github.io/SignFi/) |
 | Widar | It consists of recordings from 17 users performing 22 gesture activities in three different rooms. The dataset utilizes one transmitter and six receivers, each equipped with an Intel 5300 NIC and 3 antennas, placed at different locations. Each activity was simultaneously captured on all six receivers using 30 subcarriers, enabling the collection of multiple perspectives of the same activity. Considering each receiver's data as separate, the Widar dataset gathers a total of 271,038 data points. | [Link](http://tns.thss.tsinghua.edu.cn/widar3.0/) |
 
+## Task Generalizability of the Representations. 
 
+
+
+## Robustness to Domain Shift.
+
+
+## Robustness of SSL Algorithms to Data Scarcity.
 
 
 
