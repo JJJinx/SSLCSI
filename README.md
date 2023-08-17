@@ -23,17 +23,37 @@ Furthermore, our experimental findings uncover several limitations and blind spo
 
 ## Task Generalizability of the Representations. 
 
-```html
+
 <table>
     <tr>
-        <td>张</td>
-        <td>王</td>
+        <td>Classifer</td>
+        <td colspan="4">1-layer FC</td>
+        <td colspan="4">2-layer FC</td>
     <tr>
     <tr>
-        <td colspan="2">姓氏</td>
+        <td>Dataset</td>
+        <td>UT-HAR</td>
+        <td>Falldefi</td>
+        <td>SignFi</td>
+        <td>Widar\_R2</td>
+        <td>UT-HAR</td>
+        <td>Falldefi</td>
+        <td>SignFi</td>
+        <td>Widar\_R2</td>
+    <tr>
+    <tr>
+        <td>Supervised</td>
+        <td>98.03</td>
+        <td>91.07</td>
+        <td>97.65</td>
+        <td>94.37</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
     <tr>
 </table>
-```
+
 
 
 
