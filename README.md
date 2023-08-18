@@ -23,16 +23,29 @@ Furthermore, our experimental findings uncover several limitations and blind spo
 | Widar | It consists of recordings from 17 users performing 22 gesture activities in three different rooms. The dataset utilizes one transmitter and six receivers, each equipped with an Intel 5300 NIC and 3 antennas, placed at different locations. Each activity was simultaneously captured on all six receivers using 30 subcarriers, enabling the collection of multiple perspectives of the same activity. Considering each receiver's data as separate, the Widar dataset gathers a total of 271,038 data points. | [Link](http://tns.thss.tsinghua.edu.cn/widar3.0/) |
 
 ## Task Generalizability of the Representations. 
-
+Following tables show the accuracy of SSL algorithms on various dataset with different tasks.
 1-Layer FC result:
 | Dataset | UT-HAR | Falldefi | SignFi | Widar_{R2} | 
 | ----- | ------ | ----- | ----- | ------ |
-| Supervised | ------ | ----- | ----- | ------ |
-| SimCLR | ------ | ----- | ----- | ------ |
-| MoCo | ------ | ----- | ----- | ------ |
-| SwAV | ------ | ----- | ----- | ------ |
-| Rel-Pos | ------ | ----- | ----- | ------ |
-| MAE | ------ | ----- | ----- | ------ |
+| Supervised | 98.03 | 91.07 | 97.65 | 94.37 |
+| SimCLR | 83.93 | 77.68 | 47.10 | 40.43 |
+| MoCo | 82.50 | 77.68 | 62.64 | 41.13 |
+| SwAV | 87.50 | 77.68 | 58.41 | 36.39 |
+| Rel-Pos | 82.14 | 74.11 | 81.34 | 32.18 |
+| MoCo (ViT) | 73.21 | 74.11 | 87.14 | 62.81 |
+| MAE (ViT) | 84.29 | 78.57 | 88.77 | 69.24 |
+
+2-Layer FC result:
+| Dataset | UT-HAR | Falldefi | SignFi | Widar_{R2} | 
+| ----- | ------ | ----- | ----- | ------ |
+| Supervised | 98.03 | 91.07 | 97.65 | 94.37 |
+| SimCLR | 94.64 | 88.39 | 51.81 | 57.58 |
+| MoCo | 92.86 | 90.18 | 64.49 | 52.80 |
+| SwAV | 94.64 | 86.60 | 65.58 | 55.26 |
+| Rel-Pos | 91.07 | 82.14 | 92.03 | 48.59 |
+| MoCo (ViT) | 91.07 | 79.46 | 97.46 | 56.04 |
+| MAE | 94.64 | 85.71 | 94.20 | 89.14 |
+
 <!--
 <table>
     <tr>
@@ -131,7 +144,6 @@ Furthermore, our experimental findings uncover several limitations and blind spo
 </table>
 -->
 
-
 ## Robustness to Domain Shift.
 
 ![User Transfer](./imgs/U1R2ROOM1ROOM2.png)
@@ -141,6 +153,7 @@ Furthermore, our experimental findings uncover several limitations and blind spo
 ![Receiver Transfer](./imgs/Room1R1R2.png)
 
 ## Robustness of SSL Algorithms to Data Scarcity.
+Following table gives the result of different SSL algorithm's accuracy when labeled dataset size decrease.
 
 | Labeled Dataset Size | 100% | 50% | 20% | 10% | 5% | 
 | ----- | ------ | ----- | ----- | ------ | ----- |
