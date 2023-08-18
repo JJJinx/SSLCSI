@@ -1,4 +1,5 @@
 This website provides dataset splits and the code for SSLCSI.
+For downloading the code and data split, please fill the [request form](<iframe src="https://docs.google.com/forms/d/e/1FAIpQLScgXk6Ok33BL4S49cVRtQ-65mZu1Q1qZHgqFvtNEmCUBCfniA/viewform?embedded=true" width="640" height="1521" frameborder="0" marginheight="0" marginwidth="0">正在加载…</iframe>)
 
 ## Abstract
 Recently, with the advancement of the Internet of Things (IoT), WiFi CSI-based HAR has gained increasing attention from academic and industry communities.
