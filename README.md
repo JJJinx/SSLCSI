@@ -122,8 +122,6 @@ Furthermore, our experimental findings uncover several limitations and blind spo
 
 
 
-
-
 ## Robustness to Domain Shift.
 
 
@@ -134,9 +132,14 @@ Furthermore, our experimental findings uncover several limitations and blind spo
 
 ## Robustness of SSL Algorithms to Data Scarcity.
 
-
-
-
+| Labeled Dataset Size | 100% | 50% | 20% | 10% | 5% | 
+| ----- | ------ | ----- | ----- | ------ | ----- |
+| Supervised | 79.56 | 78.67 | 72.00 | 64.44 | 44.00 |
+| SimCLR | 85.16 | 80.71 | 72.00 | 57.24 | 53.96 |
+| MoCo | 87.20 | 79.64 | 72.00 | 67.56 | 47.91 |
+| SwAV | 87.47 | 78.93 | 70.58 | 65.24 | 50.84 |
+| Rel-Pos | 90.04 | 81.69 | 72.80 | 56.98 | 48.00 |
+| MAE | 82.84 | 74.49 | 64.89 | 58.67 | 44.59 |
 
 
 
