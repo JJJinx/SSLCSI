@@ -24,7 +24,16 @@ Furthermore, our experimental findings uncover several limitations and blind spo
 
 ## Task Generalizability of the Representations. 
 
-
+1-Layer FC result:
+| Dataset | UT-HAR | Falldefi | SignFi | Widar\_R2 | 
+| ----- | ------ | ----- | ----- | ------ |
+| Supervised | ------ | ----- | ----- | ------ |
+| SimCLR | ------ | ----- | ----- | ------ |
+| MoCo | ------ | ----- | ----- | ------ |
+| SwAV | ------ | ----- | ----- | ------ |
+| Rel-Pos | ------ | ----- | ----- | ------ |
+| MAE | ------ | ----- | ----- | ------ |
+<!--
 <table>
     <tr>
         <td>Classifer</td>
@@ -120,7 +129,7 @@ Furthermore, our experimental findings uncover several limitations and blind spo
         <td>89.14</td>
     <tr>
 </table>
-
+-->
 
 
 ## Robustness to Domain Shift.
