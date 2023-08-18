@@ -52,8 +52,73 @@ Furthermore, our experimental findings uncover several limitations and blind spo
         <td>-</td>
         <td>-</td>
     <tr>
+    <tr>
+        <td>SimCLR</td>
+        <td>83.93</td>
+        <td>77.68</td>
+        <td>47.10</td>
+        <td>40.43</td>
+        <td>94.64</td>
+        <td>88.39</td>
+        <td>51.81</td>
+        <td>57.58</td>
+    <tr>
+    <tr>
+        <td>MoCo</td>
+        <td>82.50</td>
+        <td>77.68</td>
+        <td>62.64</td>
+        <td>41.13</td>
+        <td>92.86</td>
+        <td>90.18</td>
+        <td>64.49</td>
+        <td>52.80</td>
+    <tr>
+    <tr>
+        <td>SwAV</td>
+        <td>87.50</td>
+        <td>77.68</td>
+        <td>58.41</td>
+        <td>36.39</td>
+        <td>94.64</td>
+        <td>86.60</td>
+        <td>65.58</td>
+        <td>55.26</td>
+    <tr>
+    <tr>
+        <td>Rel-Pos</td>
+        <td>82.14</td>
+        <td>74.11</td>
+        <td>81.34</td>
+        <td>32.18</td>
+        <td>91.07</td>
+        <td>82.14</td>
+        <td>92.03</td>
+        <td>48.59</td>
+    <tr>
+    <tr>
+        <td>MoCo (ViT)</td>
+        <td>73.21</td>
+        <td>74.11</td>
+        <td>87.14</td>
+        <td>62.81</td>
+        <td>91.07</td>
+        <td>79.46</td>
+        <td>97.46</td>
+        <td>56.04</td>
+    <tr>
+    <tr>
+        <td>MAE (ViT)</td>
+        <td>84.29</td>
+        <td>78.57</td>
+        <td>88.77</td>
+        <td>69.24</td>
+        <td>94.64</td>
+        <td>85.71</td>
+        <td>94.20</td>
+        <td>89.14</td>
+    <tr>
 </table>
-
 
 
 
