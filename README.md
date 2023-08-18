@@ -25,7 +25,7 @@ Furthermore, our experimental findings uncover several limitations and blind spo
 ## Task Generalizability of the Representations. 
 
 1-Layer FC result:
-| Dataset | UT-HAR | Falldefi | SignFi | Widar\_R2 | 
+| Dataset | UT-HAR | Falldefi | SignFi | Widar_{R2} | 
 | ----- | ------ | ----- | ----- | ------ |
 | Supervised | ------ | ----- | ----- | ------ |
 | SimCLR | ------ | ----- | ----- | ------ |
