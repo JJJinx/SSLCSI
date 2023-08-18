@@ -124,11 +124,11 @@ Furthermore, our experimental findings uncover several limitations and blind spo
 
 ## Robustness to Domain Shift.
 
+![User Transfer](./imgs/U1R2ROOM1ROOM2.png)
 
+![Room Transfer](./imgs/U1R2ROOM1ROOM2.png)
 
-
-
-
+![Receiver Transfer](./imgs/Room1R1R2.png)
 
 ## Robustness of SSL Algorithms to Data Scarcity.
 
