@@ -1,3 +1,4 @@
+The site is still under construction.
 This website provides dataset splits and the code for SSLCSI.
 For downloading the code and data split, please fill the [request form](https://docs.google.com/forms/d/e/1FAIpQLScgXk6Ok33BL4S49cVRtQ-65mZu1Q1qZHgqFvtNEmCUBCfniA/viewform?usp=sf_link).
 
@@ -16,7 +17,8 @@ For downloading the code and data split, please fill the [request form](https://
 
 ## Task Generalizability of the Representations. 
 Following tables show the accuracy of SSL algorithms on various dataset with different tasks.
-1-Layer FC result:
+1-Layer FC result
+
 | Dataset | UT-HAR | Falldefi | SignFi | Widar_{R2} | 
 | ----- | ------ | ----- | ----- | ------ |
 | Supervised | 98.03 | 91.07 | 97.65 | 94.37 |
@@ -27,7 +29,8 @@ Following tables show the accuracy of SSL algorithms on various dataset with dif
 | MoCo (ViT) | 73.21 | 74.11 | 87.14 | 62.81 |
 | MAE (ViT) | 84.29 | 78.57 | 88.77 | 69.24 |
 
-2-Layer FC result:
+2-Layer FC result
+
 | Dataset | UT-HAR | Falldefi | SignFi | Widar_{R2} | 
 | ----- | ------ | ----- | ----- | ------ |
 | Supervised | 98.03 | 91.07 | 97.65 | 94.37 |
@@ -47,6 +50,7 @@ Following tables show the accuracy of SSL algorithms on various dataset with dif
 
 ![Receiver Transfer](./imgs/Room1R1R2.png)
 
+
 ## Robustness of SSL Algorithms to Data Scarcity.
 Following table gives the result of different SSL algorithm's accuracy when labeled dataset size decrease.
 
@@ -59,8 +63,4 @@ Following table gives the result of different SSL algorithm's accuracy when labe
 | Rel-Pos | 90.04 | 81.69 | 72.80 | 56.98 | 48.00 |
 | MAE | 82.84 | 74.49 | 64.89 | 58.67 | 44.59 |
 
-
-
-## Cite the Paper
-> Xu, K., Wang, J., Zhu, H. and Zheng, D., 2023. Self-Supervised Learning for WiFi CSI-Based Human Activity Recognition: A Systematic Study. arXiv preprint arXiv:2308.02412.
 
