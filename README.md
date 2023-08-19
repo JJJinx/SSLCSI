@@ -19,7 +19,7 @@ For downloading the code and data split, please fill the [request form](https://
 Following tables show the accuracy of SSL algorithms on various dataset with different tasks.
 1-Layer FC result
 
-| Dataset | UT-HAR | Falldefi | SignFi | Widar$_{R2}$ | 
+| Dataset | UT-HAR | Falldefi | SignFi | Widar_R2 |
 | ----- | ------ | ----- | ----- | ------ |
 | Supervised | 98.03 | 91.07 | 97.65 | 94.37 |
 | SimCLR | 83.93 | 77.68 | 47.10 | 40.43 |
@@ -31,7 +31,7 @@ Following tables show the accuracy of SSL algorithms on various dataset with dif
 
 2-Layer FC result
 
-| Dataset | UT-HAR | Falldefi | SignFi | Widar_{R2} | 
+| Dataset | UT-HAR | Falldefi | SignFi | Widar_R2 |
 | ----- | ------ | ----- | ----- | ------ |
 | Supervised | 98.03 | 91.07 | 97.65 | 94.37 |
 | SimCLR | 94.64 | 88.39 | 51.81 | 57.58 |
@@ -62,5 +62,4 @@ Following table gives the result of different SSL algorithm's accuracy when labe
 | SwAV | 87.47 | 78.93 | 70.58 | 65.24 | 50.84 |
 | Rel-Pos | 90.04 | 81.69 | 72.80 | 56.98 | 48.00 |
 | MAE | 82.84 | 74.49 | 64.89 | 58.67 | 44.59 |
-
 
