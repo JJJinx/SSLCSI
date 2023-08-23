@@ -1,0 +1,16 @@
+FROM 8426
+
+
+MAINTAINER nickxu nickxu1001@gmail.com
+
+COPY requirements.txt /home/
+
+RUN pip install -U openmim \
+    && mim install mmcv-full \
+    && pip install -r /home/requirements.txt \
+    && cd mmselfsup \
+    && pip install -v -e .
+
+ENV APP_PORT=3000
+
+EXPOSE $APP_PORT
