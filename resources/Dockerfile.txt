@@ -8,8 +8,8 @@ COPY requirements.txt /home/
 RUN pip install -U openmim \
     && mim install mmcv-full \
     && pip install -r /home/requirements.txt \
-    && cd mmselfsup \
-    && pip install -v -e .
+    && pip install opencv-python-headless \
+    && pip install mmcv-full==1.5.0
 
 ENV APP_PORT=3000
 
