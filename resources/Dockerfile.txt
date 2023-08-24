@@ -6,11 +6,12 @@ MAINTAINER nickxu nickxu1001@gmail.com
 COPY requirements.txt /home/
 
 RUN pip install -U openmim \
-    && mim install mmcv-full \
+    && mim install mmcv-full==1.5.0 \
     && pip install -r /home/requirements.txt \
     && pip install opencv-python-headless \
-    && pip install mmcv-full==1.5.0
 
-ENV APP_PORT=3000
+
+ENV APP_PORT=3000 \
+    SKLEARN_ALLOW_DEPRECATED_SKLEARN_PACKAGE_INSTALL=True
 
 EXPOSE $APP_PORT

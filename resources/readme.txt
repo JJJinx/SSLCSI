@@ -3,3 +3,10 @@
 3.run command "docker run -v $PWD:/workspace --gpus all -it mmselfsupcsi /bin/bash"
 4.run "cd mmselfsup"
 5.run "pip install -v -e ."
+
+attention:
+if "mim install mmcv-full" does not work, try "pip install mmcv-full==1.5.0 -f https://download.openmmlab.com/mmcv/dist/cu113/torch1.11.0/index.html
+"
+
+in linux remember add the path to environment variable 
+    export PYTHONPATH=/path/to/lib:/path/to/another/lib
