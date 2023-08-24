@@ -10,3 +10,8 @@ if "mim install mmcv-full" does not work, try "pip install mmcv-full==1.5.0 -f h
 
 in linux remember add the path to environment variable 
     export PYTHONPATH=/path/to/lib:/path/to/another/lib
+
+
+build from scratch on anaconda env:
+pip install torch==1.11.0+cu113 torchvision==0.12.0+cu113 torchaudio==0.11.0 --extra-index-url https://download.pytorch.org/whl/cu113
+TODO
