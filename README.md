@@ -1,4 +1,4 @@
-The site is still under construction.
+As our website is currently undergoing construction, I kindly request that you contact me directly at xuk16@uni.coventry.ac.uk for a prompt response to any questions related to the code.
 This website provides dataset splits and the code for SSLCSI.
 For downloading the code and data split, please fill the [request form](https://docs.google.com/forms/d/e/1FAIpQLScgXk6Ok33BL4S49cVRtQ-65mZu1Q1qZHgqFvtNEmCUBCfniA/viewform?usp=sf_link).
 
