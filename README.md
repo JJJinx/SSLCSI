@@ -44,6 +44,7 @@ Following tables show the accuracy of SSL algorithms on various dataset with dif
 
 
 ## Robustness to Domain Shift.
+The 0% represent the supervised baseline.
 
 ![User Transfer](./imgs/U1R2ROOM1ROOM2.png)
 
