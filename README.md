@@ -52,7 +52,7 @@ Following tables show the accuracy of SSL algorithms on various dataset with dif
 
 
 ## Robustness of SSL Algorithms to Data Scarcity.
-Following table gives the result of different SSL algorithm's accuracy when labeled dataset size decrease.
+The following table gives the result of different SSL algorithms' accuracy when labeled dataset size decreases. These results are obtained after fine-tuning the whole network.
 
 | Labeled Dataset Size | 100% | 50% | 20% | 10% | 5% | 
 | ----- | ------ | ----- | ----- | ------ | ----- |
