@@ -43,25 +43,3 @@ Following tables show the accuracy of SSL algorithms on various dataset with dif
 | MAE | 94.64 | 85.71 | 94.20 | 89.14 |
 
 
-## Robustness to Domain Shift.
-The 0% represent the supervised baseline.
-
-![User Transfer](./imgs/U1R2ROOM1ROOM2.png)
-
-![Room Transfer](./imgs/U1R2ROOM1ROOM2.png)
-
-![Receiver Transfer](./imgs/Room1R1R2.png)
-
-
-## Robustness of SSL Algorithms to Data Scarcity.
-The following table gives the result of different SSL algorithms' accuracy when labeled dataset size decreases. These results are obtained after fine-tuning the whole network.
-
-| Labeled Dataset Size | 100% | 50% | 20% | 10% | 5% | 
-| ----- | ------ | ----- | ----- | ------ | ----- |
-| Supervised | 79.56 | 78.67 | 72.00 | 64.44 | 44.00 |
-| SimCLR | 85.16 | 80.71 | 72.00 | 57.24 | 53.96 |
-| MoCo | 87.20 | 79.64 | 72.00 | 67.56 | 47.91 |
-| SwAV | 87.47 | 78.93 | 70.58 | 65.24 | 50.84 |
-| Rel-Pos | 90.04 | 81.69 | 72.80 | 56.98 | 48.00 |
-| MAE | 82.84 | 74.49 | 64.89 | 58.67 | 44.59 |
-
