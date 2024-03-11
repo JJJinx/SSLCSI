@@ -3,6 +3,12 @@ Our paper is currently under review. If you would like to request the code, plea
 This website provides dataset splits and the code for SSLCSI.
 For downloading the code and data split, please fill the [request form](https://docs.google.com/forms/d/e/1FAIpQLScgXk6Ok33BL4S49cVRtQ-65mZu1Q1qZHgqFvtNEmCUBCfniA/viewform?usp=sf_link).
 
+# Todo List
+- [ ] Put the results in the paper
+- [ ] Experiment on the influence of different preprocessing methods on CSI data
+- [ ] Conduct a benchmark evaluation of various SSL algorithms using datasets provided by [SDP](http://www.sdp8.org/).
+
+
 ## Cite the Paper
 > Xu, K., Wang, J., Zhu, H. and Zheng, D., 2023. Self-Supervised Learning for WiFi CSI-Based Human Activity Recognition: A Systematic Study. arXiv preprint arXiv:2308.02412.
 
