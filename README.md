@@ -4,8 +4,8 @@ This website provides dataset splits and the code for SSLCSI.
 For downloading the code and data split, please fill the [request form](https://docs.google.com/forms/d/e/1FAIpQLScgXk6Ok33BL4S49cVRtQ-65mZu1Q1qZHgqFvtNEmCUBCfniA/viewform?usp=sf_link).
 
 # Todo List
-- [ ] Put the results in the paper
-- [ ] Experiment on the influence of different preprocessing methods on CSI data
+- [ ] Present the results of the paper.
+- [ ] Experiment on the influence of different preprocessing methods on CSI data.
 - [ ] Conduct a benchmark evaluation of various SSL algorithms using datasets provided by [SDP](http://www.sdp8.org/).
 
 
