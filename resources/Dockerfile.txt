@@ -1,17 +1,25 @@
-FROM pytorch/pytorch:1.13.1-cuda11.3-cudnn8-devel
+ARG PYTORCH="1.11.0"
+ARG CUDA="11.3"
+ARG CUDNN="8"
 
+FROM pytorch/pytorch:${PYTORCH}-cuda${CUDA}-cudnn${CUDNN}-devel
 
-MAINTAINER nickxu nickxu1001@gmail.com
+ENV TORCH_CUDA_ARCH_LIST="6.0 6.1 8.0 7.0+PTX"
+ENV TORCH_NVCC_FLAGS="-Xfatbin -compress-all"
+ENV CMAKE_PREFIX_PATH="$(dirname $(which conda))/../"
 
-COPY requirements.txt /home/
+RUN apt-key adv --keyserver hkp://pgp.mit.edu --recv-keys A4B469963BF863CC
+#RUN echo "Acquire::https::No-Cache=True;" > /etc/apt/apt.conf.d/99disable-checks
+RUN apt-get update
+RUN apt-get install -y ffmpeg libsm6 libxext6 git ninja-build libglib2.0-0 libsm6 libxrender-dev libxext6
+RUN apt-get clean
+RUN rm -rf /var/lib/apt/lists/*
 
-RUN pip install -U openmim \
-    && mim install mmcv-full==1.5.0 \
-    && pip install -r /home/requirements.txt \
-    && pip install opencv-python-headless \
-
-
-ENV APP_PORT=3000 \
-    SKLEARN_ALLOW_DEPRECATED_SKLEARN_PACKAGE_INSTALL=True
-
-EXPOSE $APP_PORT
+# Install MMCV MMDetection MMSegmentation
+RUN pip install -U openmim
+RUN pip install mmcv-full==1.5.0 -f https://download.openmmlab.com/mmcv/dist/cu113/torch1.11.0/index.html
+# RUN pip install -U openmim \
+#     && mim install mmcv-full==1.5.0
+RUN pip install mmsegmentation mmdet
+RUN pip install opencv-python-headless
+RUN pip install yapf==0.32.0
