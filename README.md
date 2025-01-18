@@ -1,7 +1,5 @@
-Our paper is accepted, we will update this project in next few weeks.
-If you would like to request the code, please complete the form below to register your interest. We will send the code and related dataset divisions after publication.
-This website provides dataset splits and the code for SSLCSI.
-For downloading the code and data split, please fill the [request form](https://docs.google.com/forms/d/e/1FAIpQLScgXk6Ok33BL4S49cVRtQ-65mZu1Q1qZHgqFvtNEmCUBCfniA/viewform?usp=sf_link).
+Our paper has been accepted. In the coming weeks, we will organize and upload the data splits and code, along with additional results that were not included in the paper.
+For those who have fill the [request form](https://docs.google.com/forms/d/e/1FAIpQLScgXk6Ok33BL4S49cVRtQ-65mZu1Q1qZHgqFvtNEmCUBCfniA/viewform?usp=sf_link), we will send you an notification email.
 
 # Todo List
 - [ ] Present the results of the paper.
