@@ -1,5 +1,5 @@
-Our website is currently undergoing construction.
-Our paper is currently under review. If you would like to request the code, please complete the form below to register your interest. We will send the code and related dataset divisions after publication.
+Our paper is accepted, we will update this project in next few weeks.
+If you would like to request the code, please complete the form below to register your interest. We will send the code and related dataset divisions after publication.
 This website provides dataset splits and the code for SSLCSI.
 For downloading the code and data split, please fill the [request form](https://docs.google.com/forms/d/e/1FAIpQLScgXk6Ok33BL4S49cVRtQ-65mZu1Q1qZHgqFvtNEmCUBCfniA/viewform?usp=sf_link).
 
