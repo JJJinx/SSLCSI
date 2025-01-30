@@ -1,6 +1,3 @@
-#In the coming weeks, we will organize and upload the data splits and code, along with additional results that were not included in the paper.
-#For those who have fill the [request form](https://docs.google.com/forms/d/e/1FAIpQLScgXk6Ok33BL4S49cVRtQ-65mZu1Q1qZHgqFvtNEmCUBCfniA/viewform?usp=sf_link), we will send you an notification email.
-
 Our paper has been accepted.  [Evaluating Self-Supervised Learning for WiFi CSI-Based Human Activity Recognition](https://dl.acm.org/doi/10.1145/3715130)
 ```latex
 @article{10.1145/3715130,
@@ -18,6 +15,7 @@ month = jan,
 keywords = {WiFi, Channel State Information, Self-Supervised Learning, Human Activity Recognition}
 }
 ```
+For those who have fill the [request form](https://docs.google.com/forms/d/e/1FAIpQLScgXk6Ok33BL4S49cVRtQ-65mZu1Q1qZHgqFvtNEmCUBCfniA/viewform?usp=sf_link), we will send you an notification email.
 
 
 # Todo List
