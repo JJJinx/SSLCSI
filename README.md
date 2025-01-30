@@ -18,29 +18,30 @@ keywords = {WiFi, Channel State Information, Self-Supervised Learning, Human Act
 For those who have fill the [request form](https://docs.google.com/forms/d/e/1FAIpQLScgXk6Ok33BL4S49cVRtQ-65mZu1Q1qZHgqFvtNEmCUBCfniA/viewform?usp=sf_link), we will send you an notification email.
 
 # Installation
-## Docker
-***Step 1***  run command "docker build -f ./resources/Dockerfile --rm -t mmselfsup:torch1.11.0-cuda11.3-cudnn8 ."
-3.run command "docker run -v $PWD:/workspace --gpus all -it sslcsi /bin/bash"
-4.run "cd mmselfsup"
-5.run "pip install -v -e ."
+**Docker**
+**Step 1** run command "docker build -f ./resources/Dockerfile --rm -t mmselfsup:torch1.11.0-cuda11.3-cudnn8 ."
+**Step 2** run command "docker run -v $PWD:/workspace --gpus all -it sslcsi /bin/bash"
+**Step 3** run "cd sslcsi"
+**Step 4** run "pip install -v -e ."
 
 
 ## Conda
 build from scratch on anaconda env:
-1.pip install torch==1.11.0+cu113 torchvision==0.12.0+cu113 torchaudio==0.11.0 --extra-index-url https://download.pytorch.org/whl/cu113
-2.pip install -U openmim
-3.mim install mmcv-full
-4.cd mmselfsup
-5.pip install -v -e .
+**Step 1** pip install torch==1.11.0+cu113 torchvision==0.12.0+cu113 torchaudio==0.11.0 --extra-index-url https://download.pytorch.org/whl/cu113
+**Step 2** pip install -U openmim
+**Step 3** mim install mmcv-full==1.5.0
+**Step 4** cd sslcsi
+**Step 5** pip install -v -e .
 
 other dependent please install according to the requirements.txt
-
+Thanks to [mmcv](https://github.com/open-mmlab/mmcv/tree/1.x) and  [mmselfsup](https://mmselfsup.readthedocs.io/en/0.x/) , the code organization structure and part of the code in this project refer to these two open source projects.
 
 
 # Todo List
 - [ ] Present the results of the paper.
 - [ ] Experiment on the influence of different preprocessing methods on CSI data.
 - [ ] Conduct a benchmark evaluation of various SSL algorithms using datasets provided by [SDP](http://www.sdp8.org/).
+- [ ] Update the code according to mmengine
 
 
 ## Datasets and Splits
