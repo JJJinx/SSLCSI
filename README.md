@@ -29,7 +29,8 @@ For those who have fill the [request form](https://docs.google.com/forms/d/e/1FA
 **Step 4** run "pip install -v -e ."
 
 ---
-## Conda
+
+**Conda** 
 
 build from scratch on anaconda env:
 
