@@ -9,7 +9,21 @@ For those who have fill the [request form](https://docs.google.com/forms/d/e/1FA
 
 ## Cite the Paper
 > Xu, K., Wang, J., Zhu, H. and Zheng, D., 2023. Self-Supervised Learning for WiFi CSI-Based Human Activity Recognition: A Systematic Study. arXiv preprint arXiv:2308.02412.
-
+> @article{10.1145/3715130,
+author = {Xu, Ke and Wang, Jiangtao and Zhu, Hongyuan and Zheng, Dingchang},
+title = {Evaluating Self-Supervised Learning for WiFi CSI-Based Human Activity Recognition},
+year = {2025},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+issn = {1550-4859},
+url = {https://doi.org/10.1145/3715130},
+doi = {10.1145/3715130},
+abstract = {With the advancement of the Internet of Things (IoT), WiFi Channel State Information (CSI)-based Human Activity Recognition (HAR) has garnered increasing attention from both academic and industrial communities. However, the scarcity of labeled data remains a prominent challenge in CSI-based HAR, primarily due to privacy concerns and the incomprehensibility of CSI data. Concurrently, Self-Supervised Learning (SSL) has emerged as a promising approach for addressing the dilemma of insufficient labeled data. In this paper, we undertake a comprehensive inventory and analysis of different categories of SSL algorithms, encompassing both previously studied and unexplored approaches within the field. We provide an in-depth investigation and evaluation of SSL algorithms in the context of WiFi CSI-based HAR, utilizing publicly available datasets that encompass various tasks and environmental settings. To ensure relevance to real-world applications, we design experiment settings aligned with specific requirements. Furthermore, our experimental findings uncover several limitations and blind spots in existing work, shedding light on the barriers that need to be addressed before SSL can be effectively deployed in real-world WiFi-based HAR applications. Our results also serve as practical guidelines and provide valuable insights for future research endeavors in this field.},
+note = {Just Accepted},
+journal = {ACM Trans. Sen. Netw.},
+month = jan,
+keywords = {WiFi, Channel State Information, Self-Supervised Learning, Human Activity Recognition}
+}
 
 ## Datasets and Splits
 
