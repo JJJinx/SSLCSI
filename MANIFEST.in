@@ -1,5 +1,5 @@
 include requirements/*.txt
-include mmselfsup/VERSION
-include mmselfsup/.mim/model-index.yml
-recursive-include mmselfsup/.mim/configs *.py *.yml
-recursive-include mmselfsup/.mim/tools *.sh *.py
+include SSLCSI/VERSION
+include SSLCSI/.mim/model-index.yml
+recursive-include SSLCSI/.mim/configs *.py *.yml
+recursive-include SSLCSI/.mim/tools *.sh *.py
