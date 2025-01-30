@@ -8,7 +8,6 @@ For those who have fill the [request form](https://docs.google.com/forms/d/e/1FA
 
 
 ## Cite the Paper
-> Xu, K., Wang, J., Zhu, H. and Zheng, D., 2023. Self-Supervised Learning for WiFi CSI-Based Human Activity Recognition: A Systematic Study. arXiv preprint arXiv:2308.02412.
 > @article{10.1145/3715130,
 author = {Xu, Ke and Wang, Jiangtao and Zhu, Hongyuan and Zheng, Dingchang},
 title = {Evaluating Self-Supervised Learning for WiFi CSI-Based Human Activity Recognition},
