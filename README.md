@@ -20,13 +20,17 @@ For those who have fill the [request form](https://docs.google.com/forms/d/e/1FA
 # Installation
 **Docker**
 
-**Step 1** run command "docker build -f ./resources/Dockerfile --rm -t mmselfsup:torch1.11.0-cuda11.3-cudnn8 ."
+**Step 1** run command
+`docker build -f ./resources/Dockerfile --rm -t mmselfsup:torch1.11.0-cuda11.3-cudnn8 .`  
 
-**Step 2** run command "docker run -v $PWD:/workspace --gpus all -it sslcsi /bin/bash"
+**Step 2** run command 
+`docker run -v $PWD:/workspace --gpus all -it sslcsi /bin/bash`  
 
-**Step 3** run "cd sslcsi"
+**Step 3** run command
+`cd sslcsi`
 
-**Step 4** run "pip install -v -e ."
+**Step 4** run command
+`pip install -v -e .`
 
 ---
 
@@ -34,15 +38,20 @@ For those who have fill the [request form](https://docs.google.com/forms/d/e/1FA
 
 build from scratch on anaconda env:
 
-**Step 1** pip install torch==1.11.0+cu113 torchvision==0.12.0+cu113 torchaudio==0.11.0 --extra-index-url https://download.pytorch.org/whl/cu113
+**Step 1** 
+`pip install torch==1.11.0+cu113 torchvision==0.12.0+cu113 torchaudio==0.11.0 --extra-index-url https://download.pytorch.org/whl/cu113`
 
-**Step 2** pip install -U openmim
+**Step 2** 
+`pip install -U openmim`
 
-**Step 3** mim install mmcv-full==1.5.0
+**Step 3** 
+`mim install mmcv-full==1.5.0`
 
-**Step 4** cd sslcsi
+**Step 4** 
+`cd sslcsi`
 
-**Step 5** pip install -v -e .
+**Step 5** 
+`pip install -v -e .`
 
 other dependent please install according to the requirements.txt
 Thanks to [mmcv](https://github.com/open-mmlab/mmcv/tree/1.x) and  [mmselfsup](https://mmselfsup.readthedocs.io/en/0.x/) , the code organization structure and part of the code in this project refer to these two open source projects.
