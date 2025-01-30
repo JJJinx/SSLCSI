@@ -1,19 +1,30 @@
-Our paper has been accepted. In the coming weeks, we will organize and upload the data splits and code, along with additional results that were not included in the paper.
-For those who have fill the [request form](https://docs.google.com/forms/d/e/1FAIpQLScgXk6Ok33BL4S49cVRtQ-65mZu1Q1qZHgqFvtNEmCUBCfniA/viewform?usp=sf_link), we will send you an notification email.
+#In the coming weeks, we will organize and upload the data splits and code, along with additional results that were not included in the paper.
+#For those who have fill the [request form](https://docs.google.com/forms/d/e/1FAIpQLScgXk6Ok33BL4S49cVRtQ-65mZu1Q1qZHgqFvtNEmCUBCfniA/viewform?usp=sf_link), we will send you an notification email.
+
+Our paper has been accepted.  [Evaluating Self-Supervised Learning for WiFi CSI-Based Human Activity Recognition](https://dl.acm.org/doi/10.1145/3715130)
+```latex
+@article{10.1145/3715130,
+author = {Xu, Ke and Wang, Jiangtao and Zhu, Hongyuan and Zheng, Dingchang},
+title = {Evaluating Self-Supervised Learning for WiFi CSI-Based Human Activity Recognition},
+year = {2025},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+issn = {1550-4859},
+url = {https://doi.org/10.1145/3715130},
+doi = {10.1145/3715130},
+note = {Just Accepted},
+journal = {ACM Trans. Sen. Netw.},
+month = jan,
+keywords = {WiFi, Channel State Information, Self-Supervised Learning, Human Activity Recognition}
+}
+```
+
 
 # Todo List
 - [ ] Present the results of the paper.
 - [ ] Experiment on the influence of different preprocessing methods on CSI data.
 - [ ] Conduct a benchmark evaluation of various SSL algorithms using datasets provided by [SDP](http://www.sdp8.org/).
 
-
-## Cite the Paper
-> @article{xu2023self,
-  title={Self-supervised learning for wifi csi-based human activity recognition: A systematic study},
-  author={Xu, Ke and Wang, Jiangtao and Zhu, Hongyuan and Zheng, Dingchang},
-  journal={arXiv preprint arXiv:2308.02412},
-  year={2023}
-}
 
 ## Datasets and Splits
 
