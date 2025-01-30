@@ -1,25 +1,220 @@
-Our paper has been accepted. In the coming weeks, we will organize and upload the data splits and code, along with additional results that were not included in the paper.
-For those who have fill the [request form](https://docs.google.com/forms/d/e/1FAIpQLScgXk6Ok33BL4S49cVRtQ-65mZu1Q1qZHgqFvtNEmCUBCfniA/viewform?usp=sf_link), we will send you an notification email.
+<div align="center">
+  <img src="./resources/mmselfsup_logo.png" width="500"/>
+  <div>&nbsp;</div>
+  <div align="center">
+    <b><font size="5">OpenMMLab website</font></b>
+    <sup>
+      <a href="https://openmmlab.com">
+        <i><font size="4">HOT</font></i>
+      </a>
+    </sup>
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    <b><font size="5">OpenMMLab platform</font></b>
+    <sup>
+      <a href="https://platform.openmmlab.com">
+        <i><font size="4">TRY IT OUT</font></i>
+      </a>
+    </sup>
+  </div>
+  <div>&nbsp;</div>
 
-# Todo List
-- [ ] Present the results of the paper.
-- [ ] Experiment on the influence of different preprocessing methods on CSI data.
-- [ ] Conduct a benchmark evaluation of various SSL algorithms using datasets provided by [SDP](http://www.sdp8.org/).
+[![PyPI](https://img.shields.io/pypi/v/mmselfsup)](https://pypi.org/project/mmselfsup)
+[![docs](https://img.shields.io/badge/docs-latest-blue)](https://mmselfsup.readthedocs.io/en/latest/)
+[![badge](https://github.com/open-mmlab/mmselfsup/workflows/build/badge.svg)](https://github.com/open-mmlab/mmselfsup/actions)
+[![codecov](https://codecov.io/gh/open-mmlab/mmselfsup/branch/master/graph/badge.svg)](https://codecov.io/gh/open-mmlab/mmselfsup)
+[![license](https://img.shields.io/github/license/open-mmlab/mmselfsup.svg)](https://github.com/open-mmlab/mmselfsup/blob/master/LICENSE)
+[![open issues](https://isitmaintained.com/badge/open/open-mmlab/mmselfsup.svg)](https://github.com/open-mmlab/mmselfsup/issues)
+
+[📘Documentation](https://mmselfsup.readthedocs.io/en/latest/) |
+[🛠️Installation](https://mmselfsup.readthedocs.io/en/latest/install.html) |
+[👀Model Zoo](https://github.com/open-mmlab/mmselfsup/blob/master/docs/en/model_zoo.md) |
+[🆕Update News](https://mmselfsup.readthedocs.io/en/latest/changelog.html) |
+[🤔Reporting Issues](https://github.com/open-mmlab/mmselfsup/issues/new/choose)
+</div>
+
+## requirements
+faiss==1.5.3
+matplotlib==3.7.2
+mmcls==0.25.0
+mmcv_full==1.5.0
+mmdet==3.1.0
+numpy==1.25.1
+opencv_python==4.8.0.74
+packaging==23.1
+Pillow==10.0.0
+pip==23.2.1
+pytest==7.4.0
+pytorch_sphinx_theme==0.0.19
+PyWavelets==1.4.1
+ruptures==1.0.6
+scikit-learn==1.3.0
+scipy==1.9.3
+seaborn==0.12.2
+setuptools==68.0.0
+six==1.16.0
+sympy==1.12
+timm==0.9.2
+tqdm==4.65.0
+typing_extensions==4.7.1
+umap==0.1.1
 
 
-## Cite the Paper
-> Xu, K., Wang, J., Zhu, H. and Zheng, D., 2023. Self-Supervised Learning for WiFi CSI-Based Human Activity Recognition: A Systematic Study. arXiv preprint arXiv:2308.02412.
 
 
-## Datasets and Splits
+## Introduction
 
-| Dataset | Description | URL |
-| ----- | ----------- | ---- |
-| UT-HAR | It consists of 557 recordings collected from six participants engaging in six distinct coarse-grained activities: lying down, falling, picking up an object, running, sitting down, standing up, and walking. | [Link](https://github.com/ermongroup/Wifi_Activity_Recognition) |
-| Falldefi | It contains 553 records of fall or other actions (not fall). The data was recorded in 3 environments.| [Link](https://github.com/dmsp123/FallDeFi) |
-| Signfi | It comprises recordings of 276 sign gestures performed by 5 participants in two distinct environments: lab and home. The activities were captured using a receiver equipped with an Intel 5300 NIC and 3 antennas, and each recording includes data from 30 subcarriers.  To account for environmental variability, we used a subset of the dataset that specifically includes 2760 records recorded in the home environment.  Each gesture in the dataset is represented by 10 records. We selected this dataset because it encompasses nearly all of the 300 most commonly used basic sign gestures in daily life. | [Link](https://yongsen.github.io/SignFi/) |
-| Widar | It consists of recordings from 17 users performing 22 gesture activities in three different rooms. The dataset utilizes one transmitter and six receivers, each equipped with an Intel 5300 NIC and 3 antennas, placed at different locations. Each activity was simultaneously captured on all six receivers using 30 subcarriers, enabling the collection of multiple perspectives of the same activity. Considering each receiver's data as separate, the Widar dataset gathers a total of 271,038 data points. | [Link](http://tns.thss.tsinghua.edu.cn/widar3.0/) |
+English | [简体中文](README_zh-CN.md)
 
+MMSelfSup is an open source self-supervised representation learning toolbox based on PyTorch. It is a part of the [OpenMMLab](https://openmmlab.com/) project.
+
+The master branch works with **PyTorch 1.5** or higher.
 
 
+### Major features
 
+- **Methods All in One**
+
+  MMSelfsup provides state-of-the-art methods in self-supervised learning. For comprehensive comparison in all benchmarks, most of the pre-training methods are under the same setting.
+
+- **Modular Design**
+
+  MMSelfSup follows a similar code architecture of OpenMMLab projects with modular design, which is flexible and convenient for users to build their own algorithms.
+
+- **Standardized Benchmarks**
+
+  MMSelfSup standardizes the benchmarks including logistic regression, SVM / Low-shot SVM from linearly probed features, semi-supervised classification, object detection and semantic segmentation.
+
+- **Compatibility**
+
+  Since MMSelfSup adopts similar design of modulars and interfaces as those in other OpenMMLab projects, it supports smooth evaluation on downstream tasks with other OpenMMLab projects like object detection and segmentation.
+
+
+## License
+
+This project is released under the [Apache 2.0 license](LICENSE).
+
+## ChangeLog
+
+MMSelfSup **v0.8.0** was released in 31/03/2022.
+
+Highlights of the new version:
+
+* Support **SimMIM**
+* Add **KNN** benchmark, support KNN test with checkpoint and extracted backbone weights
+* Support ImageNet-21k dataset
+
+Please refer to [changelog.md](docs/en/changelog.md) for details and release history.
+
+Differences between MMSelfSup and OpenSelfSup codebases can be found in [compatibility.md](docs/en/compatibility.md).
+
+## Model Zoo and Benchmark
+
+### Model Zoo
+Please refer to [model_zoo.md](docs/en/model_zoo.md) for a comprehensive set of pre-trained models and benchmarks.
+
+Supported algorithms:
+
+- [x] [Relative Location (ICCV'2015)](https://arxiv.org/abs/1505.05192)
+- [x] [Rotation Prediction (ICLR'2018)](https://arxiv.org/abs/1803.07728)
+- [x] [DeepCLuster (ECCV'2018)](https://arxiv.org/abs/1807.05520)
+- [x] [NPID (CVPR'2018)](https://arxiv.org/abs/1805.01978)
+- [x] [ODC (CVPR'2020)](https://arxiv.org/abs/2006.10645)
+- [x] [MoCo v1 (CVPR'2020)](https://arxiv.org/abs/1911.05722)
+- [x] [SimCLR (ICML'2020)](https://arxiv.org/abs/2002.05709)
+- [x] [MoCo v2 (ArXiv'2020)](https://arxiv.org/abs/2003.04297)
+- [x] [BYOL (NeurIPS'2020)](https://arxiv.org/abs/2006.07733)
+- [x] [SwAV (NeurIPS'2020)](https://arxiv.org/abs/2006.09882)
+- [x] [DenseCL (CVPR'2021)](https://arxiv.org/abs/2011.09157)
+- [x] [SimSiam (CVPR'2021)](https://arxiv.org/abs/2011.10566)
+- [x] [MoCo v3 (ICCV'2021)](https://arxiv.org/abs/2104.02057)
+- [x] [MAE](https://arxiv.org/abs/2111.06377)
+- [x] [SimMIM](https://arxiv.org/abs/2111.09886)
+
+More algorithms are in our plan.
+
+### Benchmark
+
+  | Benchmarks                                         | Setting                                                                                                                                                              |
+  | -------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+  | ImageNet Linear Classification (Multi-head)        | [Goyal2019](http://openaccess.thecvf.com/content_ICCV_2019/papers/Goyal_Scaling_and_Benchmarking_Self-Supervised_Visual_Representation_Learning_ICCV_2019_paper.pdf) |
+  | ImageNet Linear Classification (Last)              |                                                                                                                                                                      |
+  | ImageNet Semi-Sup Classification                   |                                                                                                                                                                      |
+  | Places205 Linear Classification (Multi-head)       | [Goyal2019](http://openaccess.thecvf.com/content_ICCV_2019/papers/Goyal_Scaling_and_Benchmarking_Self-Supervised_Visual_Representation_Learning_ICCV_2019_paper.pdf) |
+  | iNaturalist2018 Linear Classification (Multi-head) | [Goyal2019](http://openaccess.thecvf.com/content_ICCV_2019/papers/Goyal_Scaling_and_Benchmarking_Self-Supervised_Visual_Representation_Learning_ICCV_2019_paper.pdf) |
+  | PASCAL VOC07 SVM                                   | [Goyal2019](http://openaccess.thecvf.com/content_ICCV_2019/papers/Goyal_Scaling_and_Benchmarking_Self-Supervised_Visual_Representation_Learning_ICCV_2019_paper.pdf) |
+  | PASCAL VOC07 Low-shot SVM                          | [Goyal2019](http://openaccess.thecvf.com/content_ICCV_2019/papers/Goyal_Scaling_and_Benchmarking_Self-Supervised_Visual_Representation_Learning_ICCV_2019_paper.pdf) |
+  | PASCAL VOC07+12 Object Detection                   | [MoCo](http://openaccess.thecvf.com/content_CVPR_2020/papers/He_Momentum_Contrast_for_Unsupervised_Visual_Representation_Learning_CVPR_2020_paper.pdf)               |
+  | COCO17 Object Detection                            | [MoCo](http://openaccess.thecvf.com/content_CVPR_2020/papers/He_Momentum_Contrast_for_Unsupervised_Visual_Representation_Learning_CVPR_2020_paper.pdf)               |
+  | Cityscapes Segmentation                            | [MMSeg](configs/benchmarks/mmsegmentation/cityscapes/fcn_r50-d8_769x769_40k_cityscapes.py)                                                                           |
+  | PASCAL VOC12 Aug Segmentation                      | [MMSeg](configs/benchmarks/mmsegmentation/voc12aug/fcn_r50-d8_512x512_20k_voc12aug.py)                                                                               |
+
+## Installation
+
+MMSelfSup depends on [PyTorch](https://pytorch.org/)], [MMCV](https://github.com/open-mmlab/mmcv) and [MMClassification](https://github.com/open-mmlab/mmclassification).
+
+Please refer to [install.md](docs/en/install.md) for more detailed instruction.
+
+## Get Started
+
+Please refer to [prepare_data.md](docs/en/prepare_data.md) for dataset preparation and [getting_started.md](docs/en/getting_started.md) for the basic usage of MMSelfSup.
+
+We also provides tutorials for more details:
+
+- [config](docs/en/tutorials/0_config.md)
+- [add new dataset](docs/en/tutorials/1_new_dataset.md)
+- [data pipeline](docs/en/tutorials/2_data_pipeline.md)
+- [add new module](docs/en/tutorials/3_new_module.md)
+- [customize schedules](docs/en/tutorials/4_schedule.md)
+- [customize runtime](docs/en/tutorials/5_runtime.md)
+- [benchmarks](docs/en/tutorials/6_benchmarks.md)
+
+Besides, we provide [colab tutorial](https://github.com/open-mmlab/mmselfsup/blob/master/demo/mmselfsup_colab_tutorial.ipynb) for basic usage.
+
+## Citation
+
+If you use this toolbox or benchmark in your research, please cite this project.
+
+```bibteX
+@misc{mmselfsup2021,
+    title={{MMSelfSup}: OpenMMLab Self-Supervised Learning Toolbox and Benchmark},
+    author={MMSelfSup Contributors},
+    howpublished={\url{https://github.com/open-mmlab/mmselfsup}},
+    year={2021}
+}
+```
+
+## Contributing
+
+We appreciate all contributions improving MMSelfSup. Please refer to [CONTRIBUTING.md](docs/en/community/CONTRIBUTING.md) for more details about the contributing guideline.
+
+## Acknowledgement
+
+Remarks:
+
+- MMSelfSup originates from OpenSelfSup, and we appreciate all early contributions made to OpenSelfSup. A few contributors are listed here: Xiaohang Zhan, Jiahao Xie, Enze Xie, Xiangxiang Chu, Zijian He.
+- The implementation of MoCo and the detection benchmark borrow the code from [MoCo](https://github.com/facebookresearch/moco).
+- The implementation of SwAV borrows the code from [SwAV](https://github.com/facebookresearch/swav).
+- The SVM benchmark borrows the code from [fair_self_supervision_benchmark](https://github.com/facebookresearch/fair_self_supervision_benchmark).
+- `mmselfsup/utils/clustering.py` is borrowed from [deepcluster](https://github.com/facebookresearch/deepcluster/blob/master/clustering.py).
+
+## Projects in OpenMMLab
+
+- [MMCV](https://github.com/open-mmlab/mmcv): OpenMMLab foundational library for computer vision.
+- [MIM](https://github.com/open-mmlab/mim): MIM installs OpenMMLab packages.
+- [MMClassification](https://github.com/open-mmlab/mmclassification): OpenMMLab image classification toolbox and benchmark.
+- [MMDetection](https://github.com/open-mmlab/mmdetection): OpenMMLab detection toolbox and benchmark.
+- [MMDetection3D](https://github.com/open-mmlab/mmdetection3d): OpenMMLab's next-generation platform for general 3D object detection.
+- [MMRotate](https://github.com/open-mmlab/mmrotate): OpenMMLab rotated object detection toolbox and benchmark.
+- [MMSegmentation](https://github.com/open-mmlab/mmsegmentation): OpenMMLab semantic segmentation toolbox and benchmark.
+- [MMOCR](https://github.com/open-mmlab/mmocr): OpenMMLab text detection, recognition, and understanding toolbox.
+- [MMPose](https://github.com/open-mmlab/mmpose): OpenMMLab pose estimation toolbox and benchmark.
+- [MMHuman3D](https://github.com/open-mmlab/mmhuman3d): OpenMMLab 3D human parametric model toolbox and benchmark.
+- [MMSelfSup](https://github.com/open-mmlab/mmselfsup): OpenMMLab self-supervised learning toolbox and benchmark.
+- [MMRazor](https://github.com/open-mmlab/mmrazor): OpenMMLab model compression toolbox and benchmark.
+- [MMFewShot](https://github.com/open-mmlab/mmfewshot): OpenMMLab fewshot learning toolbox and benchmark.
+- [MMAction2](https://github.com/open-mmlab/mmaction2): OpenMMLab's next-generation action understanding toolbox and benchmark.
+- [MMTracking](https://github.com/open-mmlab/mmtracking): OpenMMLab video perception toolbox and benchmark.
+- [MMFlow](https://github.com/open-mmlab/mmflow): OpenMMLab optical flow toolbox and benchmark.
+- [MMEditing](https://github.com/open-mmlab/mmediting): OpenMMLab image and video editing toolbox.
+- [MMGeneration](https://github.com/open-mmlab/mmgeneration): OpenMMLab image and video generative models toolbox.
+- [MMDeploy](https://github.com/open-mmlab/mmdeploy): OpenMMLab model deployment framework.
