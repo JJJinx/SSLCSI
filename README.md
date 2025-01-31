@@ -60,9 +60,6 @@ Thanks to [mmcv](https://github.com/open-mmlab/mmcv/tree/1.x) and  [mmselfsup](h
 
 
 # Todo List
-- [ ] Update the data split files.
-- [ ] Update ssh files
-- [ ] Present the results of the paper.
 - [ ] Experiment on the influence of different preprocessing methods on CSI data.
 - [ ] Conduct a benchmark evaluation of various SSL algorithms using datasets provided by [SDP](http://www.sdp8.org/).
 - [ ] Update the code according to mmengine.
