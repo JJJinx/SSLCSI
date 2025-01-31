@@ -354,115 +354,115 @@ all_action_list = []
 action_list = ['Push&Pull','Sweep','Clap','Slide','Draw-Zigzag(V)','Draw-N(V)','Draw-N(H)','Draw-O(H)','Draw-Rectangle(H)','Draw-Triangle(H)','Draw-Zigzag(H)','Draw-O(V)',
                 'Draw-1','Draw-2','Draw-3','Draw-4','Draw-5','Draw-6','Draw-7','Draw-8','Draw-9','Draw-0']
 broken_files = [
-    '/home/x/xuk16/data/widar/CSI_20181109/20181109/user2/user2-6-4-4-2-r1.dat',
-    '/home/x/xuk16/data/widar/CSI_20181109/20181109/user3/user3-1-3-1-8-r5.dat',
-    '/home/x/xuk16/data/widar/CSI_20181118/20181118/user2/user2-3-5-3-4-r5.dat',
-    '/home/x/xuk16/data/widar/20181209/20181209/user6/user6-3-1-1-5-r5.dat',
-    '/home/x/xuk16/data/widar/20181211_user8_9/user8/user8-1-1-1-1-r5.dat',
-    '/home/x/xuk16/data/widar/20181211_user8_9/user8/user8-3-3-3-5-r2.dat',
-    '/home/x/xuk16/data/widar/20181211_user8_9/user9/user9-1-1-1-1-r1.dat'
+    '/data/widar/20181109/user2/user2-6-4-4-2-r1.dat',
+    '/data/widar/20181109/user3/user3-1-3-1-8-r5.dat',
+    '/data/widar/20181118/user2/user2-3-5-3-4-r5.dat',
+    '/data/widar/20181209/user6/user6-3-1-1-5-r5.dat',
+    '/data/widar/20181211/user8/user8-1-1-1-1-r5.dat',
+    '/data/widar/20181211/user8/user8-3-3-3-5-r2.dat',
+    '/data/widar/20181211/user9/user9-1-1-1-1-r1.dat'
 ]
 
 
 #做数据处理，处理成为tensor dataset的格式后做数据集分割
-r_file = np.loadtxt('/home/x/xuk16/data/widar_all_r2/f_list.txt',dtype = str,delimiter=" ")
-r_act = np.loadtxt('/home/x/xuk16/data/widar_all_r2/act_list.txt',dtype = str,delimiter=" ")
+r_file = np.loadtxt('/data/widar_all_r2/train_f_list.txt',dtype = str,delimiter=" ")
+r_act = np.loadtxt('/data/widar_all_r2/train_act_list.txt',dtype = str,delimiter=" ")
 records = []
 labels = []
 filenames = []
-error_file = ['/home/x/xuk16/data/widar/CSI_20181115/20181115/user1/user1-4-6-4-20-r2.dat']
+error_file = ['/data/widar/CSI_20181115/20181115/user1/user1-4-6-4-20-r2.dat']
 
-# print("extract data")
-# for f,act in tqdm(zip(r_file,r_act)):
-#     csidata = Intel(f, nrxnum=3, ntxnum=1, pl_len=0, if_report=True)
-#     csidata.read()
-#     csi = csidata.get_scaled_csi() # shape [T,30,3,1]
-#                                     # represent as a+bj 
-#                                     #复数可以表示为A*e^(jw) A是幅值，w是相位角
+print("extract data")
+for f,act in tqdm(zip(r_file,r_act)):
+    csidata = Intel(f, nrxnum=3, ntxnum=1, pl_len=0, if_report=True)
+    csidata.read()
+    csi = csidata.get_scaled_csi() # shape [T,30,3,1]
+                                    # represent as a+bj 
+                                    #复数可以表示为A*e^(jw) A是幅值，w是相位角
 
-#     # select antenna 2 as the reference antenna
-#     ref_antenna = np.expand_dims(np.conjugate(csi[:,:,1,:]),axis=2)
-#     res_antenna = csi[:,:,:,:]  # when training discarding the reference antenna 1
-#     # get the CSI ratio output
-#     csi_ratio = res_antenna*ref_antenna #shape [T,30,3,1] complex number
-#     csi_ratio_amp = np.abs(csi_ratio)  #shape [T,30,3,1]
-#     csi_ratio_ang = np.angle(csi_ratio)  #shape [T,30,3,1]
-#     amp = np.abs(csi)   #shape [T,30,3,1]
-#     phase = np.angle(csi)   #shape [T,30,3,1]
+    # select antenna 2 as the reference antenna
+    ref_antenna = np.expand_dims(np.conjugate(csi[:,:,1,:]),axis=2)
+    res_antenna = csi[:,:,:,:]  # when training discarding the reference antenna 1
+    # get the CSI ratio output
+    csi_ratio = res_antenna*ref_antenna #shape [T,30,3,1] complex number
+    csi_ratio_amp = np.abs(csi_ratio)  #shape [T,30,3,1]
+    csi_ratio_ang = np.angle(csi_ratio)  #shape [T,30,3,1]
+    amp = np.abs(csi)   #shape [T,30,3,1]
+    phase = np.angle(csi)   #shape [T,30,3,1]
 
-#     record = np.concatenate((amp,phase,csi_ratio_amp,csi_ratio_ang),axis=-1) #shape [T,30,3,4]
-#     label = action_list.index(act)
-#     time_stamp = csidata.timestamp_low # list length = [T]
-#     record = resample(record, time_stamp,500)
-#     record = np.array(record)
-#     record = torch.tensor(record, dtype=torch.float32, requires_grad=False) # shape =  [500,30,3,4]
-#     if record.shape[0]!=500:
-#         error_file.append(f)
-#     else:
-#         records.append(record)
-#         labels.append(label)
-#         filenames.append(f)
-# records = torch.stack(records)
-# labels = torch.tensor(labels)
+    record = np.concatenate((amp,phase,csi_ratio_amp,csi_ratio_ang),axis=-1) #shape [T,30,3,4]
+    label = action_list.index(act)
+    time_stamp = csidata.timestamp_low # list length = [T]
+    record = resample(record, time_stamp,500)
+    record = np.array(record)
+    record = torch.tensor(record, dtype=torch.float32, requires_grad=False) # shape =  [500,30,3,4]
+    if record.shape[0]!=500:
+        error_file.append(f)
+    else:
+        records.append(record)
+        labels.append(label)
+        filenames.append(f)
+records = torch.stack(records)
+labels = torch.tensor(labels)
 
-# #dataset = torch.utils.data.TensorDataset(records, labels)
-# dataset = CSIdataset(records,labels,filenames)
+#dataset = torch.utils.data.TensorDataset(records, labels)
+dataset = CSIdataset(records,labels,filenames)
 
-# del records
-# del labels
-# torch.save(dataset,'/home/x/xuk16/data/widar_all_r2_conjugate/widar_r2.pt')
-# #torch.save(ratio_dataset,'/home/x/xuk16/data/widar_all_r2_conjugate/widar_r2.pt')
-dataset = torch.load("/home/x/xuk16/data/widar_all_r2_conjugate/widar_r2.pt")
+del records
+del labels
+torch.save(dataset,'/data/widar_all_r2_conjugate/widar_r2.pt')
+#torch.save(ratio_dataset,'/data/widar_all_r2_conjugate/widar_r2.pt')
+dataset = torch.load("/data/widar_all_r2_conjugate/widar_r2.pt")
 print('done')
 
-## split data into train,val and test
-train_size = int(0.6*len(dataset))
-val_size = int(0.2*len(dataset))
-test_size = len(dataset)-train_size-val_size
-train_set,val_set,test_set=torch.utils.data.random_split(
-    dataset,[train_size,val_size,test_size], generator=torch.Generator().manual_seed(42))
+# ## split data into train,val and test
+# train_size = int(0.6*len(dataset))
+# val_size = int(0.2*len(dataset))
+# test_size = len(dataset)-train_size-val_size
+# train_set,val_set,test_set=torch.utils.data.random_split(
+#     dataset,[train_size,val_size,test_size], generator=torch.Generator().manual_seed(42))
 
-del dataset
-#re generate the dataset file and the filename list file
-print("saving training dataset")
-records = []
-labels = []
-filenames = []
-for record,label,fname in tqdm(train_set):
-    records.append(record)
-    labels.append(label)
-    filenames.append(fname)
-records = torch.stack(records)
-labels = torch.tensor(labels)
-train_set = torch.utils.data.TensorDataset(records,labels)
-np.savetxt('/home/x/xuk16/data/widar_all_r2_conjugate/train_f_list.txt', filenames, delimiter="\n", fmt="%s") 
-torch.save(train_set,'/home/x/xuk16/data/widar_all_r2_conjugate/widar_r2_train.pt')
+# del dataset
+# #re generate the dataset file and the filename list file
+# print("saving training dataset")
+# records = []
+# labels = []
+# filenames = []
+# for record,label,fname in tqdm(train_set):
+#     records.append(record)
+#     labels.append(label)
+#     filenames.append(fname)
+# records = torch.stack(records)
+# labels = torch.tensor(labels)
+# train_set = torch.utils.data.TensorDataset(records,labels)
+# np.savetxt('/data/widar_all_r2_conjugate/train_f_list.txt', filenames, delimiter="\n", fmt="%s") 
+# torch.save(train_set,'/data/widar_all_r2_conjugate/widar_r2_train.pt')
 
-print("saving validation dataset")
-records = []
-labels = []
-filenames = []
-for record,label,fname in tqdm(val_set):
-    records.append(record)
-    labels.append(label)
-    filenames.append(fname)
-records = torch.stack(records)
-labels = torch.tensor(labels)
-val_set = torch.utils.data.TensorDataset(records,labels)
-np.savetxt('/home/x/xuk16/data/widar_all_r2_conjugate/val_f_list.txt', filenames, delimiter="\n", fmt="%s") 
-torch.save(val_set,'/home/x/xuk16/data/widar_all_r2_conjugate/widar_r2_val.pt')
+# print("saving validation dataset")
+# records = []
+# labels = []
+# filenames = []
+# for record,label,fname in tqdm(val_set):
+#     records.append(record)
+#     labels.append(label)
+#     filenames.append(fname)
+# records = torch.stack(records)
+# labels = torch.tensor(labels)
+# val_set = torch.utils.data.TensorDataset(records,labels)
+# np.savetxt('/data/widar_all_r2_conjugate/val_f_list.txt', filenames, delimiter="\n", fmt="%s") 
+# torch.save(val_set,'/data/widar_all_r2_conjugate/widar_r2_val.pt')
 
-print("saving test dataset")
-records = []
-labels = []
-filenames = []
-for record,label,fname in tqdm(test_set):
-    records.append(record)
-    labels.append(label)
-    filenames.append(fname)
-records = torch.stack(records)
-labels = torch.tensor(labels)
-test_set = torch.utils.data.TensorDataset(records,labels)
-np.savetxt('/home/x/xuk16/data/widar_all_r2_conjugate/test_f_list.txt', filenames, delimiter="\n", fmt="%s") 
-torch.save(test_set,'/home/x/xuk16/data/widar_all_r2_conjugate/widar_r2_test.pt')
+# print("saving test dataset")
+# records = []
+# labels = []
+# filenames = []
+# for record,label,fname in tqdm(test_set):
+#     records.append(record)
+#     labels.append(label)
+#     filenames.append(fname)
+# records = torch.stack(records)
+# labels = torch.tensor(labels)
+# test_set = torch.utils.data.TensorDataset(records,labels)
+# np.savetxt('/data/widar_all_r2_conjugate/test_f_list.txt', filenames, delimiter="\n", fmt="%s") 
+# torch.save(test_set,'/data/widar_all_r2_conjugate/widar_r2_test.pt')
 
