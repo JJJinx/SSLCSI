@@ -1,3 +1,5 @@
+![SSLBM Model](resources/img/SSLBM.png)
+
 Our paper has been accepted: [Evaluating Self-Supervised Learning for WiFi CSI-Based Human Activity Recognition](https://dl.acm.org/doi/10.1145/3715130)
 ```latex
 @article{10.1145/3715130,
