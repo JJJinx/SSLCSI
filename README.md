@@ -19,6 +19,8 @@ keywords = {WiFi, Channel State Information, Self-Supervised Learning, Human Act
 ```
 For those who have fill the [request form](https://docs.google.com/forms/d/e/1FAIpQLScgXk6Ok33BL4S49cVRtQ-65mZu1Q1qZHgqFvtNEmCUBCfniA/viewform?usp=sf_link), we will send you an notification email.
 
+# There are still some problem of installing our package, we will fix it in several days.
+
 # Installation
 **Docker**
 
